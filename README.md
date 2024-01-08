@@ -17,7 +17,8 @@ The Arduino Mega runs a program that reads temperature and humidity values from 
 ## Getting Started
 
 1. **Hardware Connections:**
-   - Connect the DHT11, DS3231, Micro SD Card, and LCD Keypad Shield 16x2 to the Arduino Mega following the provided schematics (https://github.com/vikky0218/Temperature-Data-Logger-Arduino/blob/main/CircuitDiagram.png).
+   - Connect the DHT11, DS3231, Micro SD Card, and LCD Keypad Shield 16x2 to the Arduino Mega following the provided schematics
+   - (https://github.com/vikky0218/Temperature-Data-Logger-Arduino/blob/main/CircuitDiagram.png).
 
 2. **Software Setup:**
    - Install the necessary libraries for DHT11, DS3231, and SD card (provide links to libraries).
