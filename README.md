@@ -21,7 +21,7 @@ The Arduino Mega runs a program that reads temperature and humidity values from 
 
 2. **Software Setup:**
    - Install the necessary libraries for DHT11, DS3231, and SD card (provide links to libraries).
-   - Upload the Arduino sketch (`temperature_logger.ino`) to your Arduino Mega.
+   - Upload the Arduino sketch (`Data-Logger_MEGA.ino)`) to your Arduino Mega.
 
 3. **Usage:**
    - Power on the Arduino Mega with the connected components.
@@ -31,6 +31,3 @@ The Arduino Mega runs a program that reads temperature and humidity values from 
 
 Feel free to contribute to the development of this project by opening issues or pull requests. Your feedback and improvements are highly appreciated.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
