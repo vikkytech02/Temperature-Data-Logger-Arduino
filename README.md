@@ -1,34 +1,59 @@
 # Temperature Data Logger using Arduino Mega
 
-This repository contains the code and documentation for a Temperature Data Logger using Arduino Mega. The project utilizes various components to log temperature data, including DHT11 for temperature and humidity sensing, DS3231 for accurate timekeeping, a Micro SD card for data storage, and an LCD Keypad Shield 16x2 to display live data and time.
+This repository hosts the code and schematics for a robust temperature and humidity data logger built using Arduino Mega. The system reads environmental data, logs it with timestamps, displays real-time readings, and provides future-proof functionality for data analysis.
+
+## Table of Contents
+1. [Features](#features)
+2. [Components Used](#components-used)
+3. [Schematics](#schematics)
+4. [Setup Instructions](#setup-instructions)
+5. [Serial Communication Format](#serial-communication-format)
+6. [Contributing](#contributing)
+7. [License](#license)
+
+## Features
+- **Real-Time Data Logging:** Logs temperature and humidity with precise timestamps.
+- **Data Storage:** Saves readings in CSV format on an SD card for long-term storage.
+- **Live Data Display:** Shows current temperature, humidity, and time on a 16x2 LCD screen.
+- **Persistent Configuration:** Ensures last configuration settings are retained using SD card storage.
+- **Serial Output:** Provides logged data in a structured format for software integration.
 
 ## Components Used
+- **Arduino Mega:** Controls the system.
+- **DHT11 Sensor:** Measures temperature and humidity.
+- **DS3231 RTC Module:** Supplies accurate time for timestamps.
+- **Micro SD Card Module:** Stores logged data persistently.
+- **LCD Keypad Shield 16x2:** Displays live data and provides user interface control.
+- **Breadboard & Jumper Wires:** For prototyping and connections.
 
-- **Arduino Mega:** The main microcontroller responsible for running the data logging code.
-- **DHT11:** A sensor used for measuring temperature and humidity.
-- **DS3231:** A real-time clock module to provide accurate time and timestamps for the logged data.
-- **Micro SD Card:** Used for storing temperature data in a persistent manner.
-- **LCD Keypad Shield 16x2:** Display module for showing live data and time, and also for user interface control.
+## Schematics
+Refer to the provided circuit diagram:  
+[![Circuit Diagram](https://github.com/vikky0218/Temperature-Data-Logger-Arduino/blob/main/CircuitDiagram.png)](https://github.com/vikky0218/Temperature-Data-Logger-Arduino/blob/main/CircuitDiagram.png)
 
-## Functionality
+## Setup Instructions
 
-The Arduino Mega runs a program that reads temperature and humidity values from the DHT11 sensor, records the data along with accurate timestamps from the DS3231 module, and stores it on the Micro SD card. Additionally, the live data and time are displayed on the LCD Keypad Shield 16x2. The logged data is also printed to the serial port in a specific pattern, making it accessible for further analysis through different software by manipulating the serial monitor text.
+1. **Hardware Connections:**  
+   - Assemble the DHT11, DS3231, SD Card module, and LCD Keypad Shield as per the schematics.
 
-## Getting Started
+2. **Software Prerequisites:**  
+   - Install these libraries in Arduino IDE:
+     - [DHT Library](https://github.com/adafruit/DHT-sensor-library)
+     - [RTCLib](https://github.com/adafruit/RTClib)
+     - [SD Library](https://www.arduino.cc/en/Reference/SD)
 
-1. **Hardware Connections:**
-   - Connect the DHT11, DS3231, Micro SD Card, and LCD Keypad Shield 16x2 to the Arduino Mega following the provided schematics
-   - (https://github.com/vikky0218/Temperature-Data-Logger-Arduino/blob/main/CircuitDiagram.png).
+3. **Upload the Code:**  
+   - Open `Data-Logger_MEGA.ino` and upload it to the Arduino Mega.
 
-2. **Software Setup:**
-   - Install the necessary libraries for DHT11, DS3231, and SD card (provide links to libraries).
-   - Upload the Arduino sketch (`Data-Logger_MEGA.ino)`) to your Arduino Mega.
+4. **Viewing the Data:**  
+   - Insert an SD card into the module.
+   - Open the Arduino Serial Monitor at `9600 baud` to view real-time data and log entries.
 
-3. **Usage:**
-   - Power on the Arduino Mega with the connected components.
-   - Open the Serial Monitor in the Arduino IDE or your preferred serial communication software to view the logged data.
+## Serial Communication Format
+The serial output is structured for easy parsing:
+Temperature (°C); Humidity (%); Time (HH:MM:SS); Date (DD/MM/YYYY)
 
 ## Contributing
+Pull requests are welcome. For major changes, please open an issue to discuss what you would like to modify.
 
-Feel free to contribute to the development of this project by opening issues or pull requests. Your feedback and improvements are highly appreciated.
-
+## License
+This project is licensed under the [MIT License](LICENSE).
